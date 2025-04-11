@@ -16,6 +16,7 @@ import { IoCheckmarkCircleSharp } from "react-icons/io5";
 import { MdOutlineDashboardCustomize } from "react-icons/md";
 import { PiAtom, PiGearSix, PiSelectionBackgroundLight } from "react-icons/pi";
 import SignOut from "./SignOut";
+import  DownloadPDFButton  from "./DownloadPDFButton";
 
 const Header = async () => {
   const session = await auth();
@@ -92,6 +93,7 @@ const Header = async () => {
 
       <div className="flex items-center gap-3">
       {/* {<ModeToggle  />} */}
+      <DownloadPDFButton />
         <Menu>
           {session?.user ? (   // if user is signed in, show user image
             <MenuButton className="w-8 h-8 rounded-full ring-4 ring-white/10 hover:ring-white/50 font-semibold tracking-wide mr-2 duration-300">

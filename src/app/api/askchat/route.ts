@@ -4,6 +4,7 @@ import admin from "firebase-admin";
 import { Message } from "@/type";
 import { adminDB } from "@/firabaseAdmin";
 
+
 export const POST = async (req: NextRequest) => {
   const reqBody = await req.json();
 
@@ -31,6 +32,7 @@ export const POST = async (req: NextRequest) => {
     }
 
     const response = await query(prompt, id ,model, mode);
+    console.log("response", response);
 
     const message: Message = {
       text: response || "Youlearn was unable to find an answer for that!",
@@ -43,6 +45,8 @@ export const POST = async (req: NextRequest) => {
       },
     };
 
+    console.log("adding message")
+
     await adminDB
       .collection("users")
       .doc(session)
@@ -50,6 +54,8 @@ export const POST = async (req: NextRequest) => {
       .doc(id)
       .collection("messages")
       .add(message);
+
+    console.log("added message")
 
     return NextResponse.json(
       {

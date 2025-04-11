@@ -13,6 +13,7 @@ const Chat = ({ id }: { id: string }) => {
   const userEmail = session?.user
     ? (session?.user?.email as string)
     : "unknown";
+
   const bottomRef = useRef<HTMLDivElement>(null);
 
   const [messages] = useCollection(
@@ -22,7 +23,7 @@ const Chat = ({ id }: { id: string }) => {
     )
   );
 
-  // Scroll to the bottom whenever messages update
+  // Auto scroll to bottom when messages update
   useEffect(() => {
     if (bottomRef.current) {
       bottomRef.current.scrollIntoView({ behavior: "smooth" });
@@ -37,12 +38,17 @@ const Chat = ({ id }: { id: string }) => {
           <BsArrowDownCircle className="text-xl text-green-300 animate-bounce" />
         </div>
       )}
-      {messages?.docs?.map((message, index) => (
-        <div key={message?.id}>
-          <Message message={message?.data()} />
-          {index < messages?.docs?.length - 1 && <div className="" />}
-        </div>
-      ))}
+
+      {/* Wrapped Messages */}
+      <div id="pdf-content" className="space-y-4">
+        {messages?.docs?.map((message, index) => (
+          <div key={message?.id}>
+            <Message message={message?.data()} />
+            {index < messages?.docs?.length - 1 && <div className="" />}
+          </div>
+        ))}
+      </div>
+
       <div ref={bottomRef} />
     </div>
   );
