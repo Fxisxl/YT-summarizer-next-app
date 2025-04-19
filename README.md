@@ -2,7 +2,7 @@
 
 An intelligent, full-stack study assistant designed to help you chat, summarize YouTube videos, and manage conversations in real-time — with PDF export functionality and support for markdown/code rendering.
 
-Built with **Next.js 14**, **FastAPI**, **Firebase Firestore**, **OpenAI LLMs**, and (optionally) **AstraDB (CassIO)** for RAG-based retrieval.
+Built with **Next.js 14**, **FastAPI**, **Firebase Firestore**, **Opensource LLMs**, and (optionally) **AstraDB (CassIO)** for RAG-based retrieval.
 
 ---
 
