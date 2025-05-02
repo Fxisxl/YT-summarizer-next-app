@@ -41,7 +41,7 @@ export const POST = async (req: NextRequest) => {
         _id: "Assistant",
         name: "Assistant",
         avatar:
-          "https://res.cloudinary.com/duehd78sl/image/upload/v1729227742/logoLight_amxdpz.png",
+          "https://res.cloudinary.com/drnmwucy2/image/upload/b_rgb:FFFFFF/c_pad,w_500,h_500,ar_1:1/v1746214127/d9e5tju-af9e4eff-5882-4ac0-abb0-936524aefd57_cxwite.png",
       },
     };
 
