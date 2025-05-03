@@ -6,6 +6,13 @@ Built with **Next.js 14**, **FastAPI**, **Firebase Firestore**, **Opensource LLM
 
 ---
 
+# ✨ Demo Video
+  
+
+https://github.com/user-attachments/assets/10295394-aaaa-4156-8f04-51cc0ea8cc82
+
+
+
 ## 🚀 Features
 
 - ✨ ChatGPT-like UI with Markdown & code highlighting
